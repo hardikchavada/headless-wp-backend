@@ -22,3 +22,14 @@ endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 // END ENQUEUE PARENT ACTION
+
+
+// Hello World Test Shortcode function
+function test_hello_world_shortcode() {
+    return '<div style="padding: 20px; background: #f0f0f0; border: 2px solid #0073aa; border-radius: 8px; text-align: center; font-family: Arial, sans-serif;">
+                <h2>🎉 Hello World! 🎉</h2>
+                <p>Your child theme is working correctly!</p>
+                <p>GitHub → Hostinger auto-deployment is successful!</p>
+            </div>';
+}
+add_shortcode('hello_world', 'test_hello_world_shortcode');
